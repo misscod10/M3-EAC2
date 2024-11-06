@@ -24,7 +24,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
 
     def test_login(self):
         # anem directament a la pàgina d'accés a l'admin panel
-        self.selenium.get('%s%s' % (self.live_server_url , '/admin/login'))
+        self.selenium.get('%s%s' % ('http://localhost:8000' , '/admin/login'))
         #self.live_server_url
         # comprovem que el títol de la pàgina és el que esperem
         self.assertEqual( self.selenium.title , "Log in | Django site admin" )
